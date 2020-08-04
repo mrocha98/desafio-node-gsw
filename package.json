@@ -1,0 +1,61 @@
+{
+  "name": "desafio-node-gsw",
+  "version": "1.0.0",
+  "description": "Desafio do SMS boladão",
+  "main": "src/app.js",
+  "repository": "git@github.com:mrocha98/desafio-node-gsw.git",
+  "author": "Matheus Rocha <matheus_rocha98@outlook.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "eslint src --max-warnings=0",
+    "test": "jest",
+    "start": "node src/app.js",
+    "start:dev": "nodemon -- -r esm -r dotenv/config src/app.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "koa": "^2.13.0",
+    "koa-helmet": "^5.2.0",
+    "mongoose": "^5.9.27"
+  },
+  "devDependencies": {
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "jest": "^26.2.2",
+    "lint-staged": "^10.2.11",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  }
+}
