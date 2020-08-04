@@ -29,4 +29,24 @@ const sms = msg
   })
   .join('')
 
-console.log(sms)
+const decoded = sms
+  .split('')
+  .reduce((newArray, character, index, elements) => {
+    if (character === separator) return newArray
+
+    const last = elements[index - 1]
+    if (last === character) return newArray
+
+    let counter = 1
+    while (elements[index + counter] === character) {
+      counter++
+    }
+    return newArray.concat({ value: character, times: counter })
+  }, [])
+  .map((item) => {
+    const foundedIndex = keyboard.findIndex((key) => key.value === item.value)
+    return keyboard[foundedIndex].letters[item.times - 1]
+  })
+  .join('')
+
+console.log(decoded)
