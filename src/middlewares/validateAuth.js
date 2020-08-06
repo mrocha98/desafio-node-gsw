@@ -16,7 +16,8 @@ async function validateAuth(ctx, next) {
   const [, token] = authorization.split(' ')
 
   try {
-    await AuthService.verifyToken(token)
+    const { id } = await AuthService.verifyToken(token)
+    ctx.state.userId = id
   } catch {
     ctx.status = UNAUTHORIZED
     ctx.body = {

@@ -23,9 +23,13 @@ class MessageController {
       return
     }
 
+    const code = Message.messageToCode(message)
     ctx.body = {
-      code: Message.messageToCode(message)
+      code
     }
+
+    ctx.state.message = message
+    ctx.state.code = code
   }
 
   converToMessage(ctx) {
@@ -39,9 +43,13 @@ class MessageController {
       return
     }
 
+    const message = Message.codeToMessage(code)
     ctx.body = {
-      message: Message.codeToMessage(code)
+      message
     }
+
+    ctx.state.message = message
+    ctx.state.code = code
   }
 }
 
