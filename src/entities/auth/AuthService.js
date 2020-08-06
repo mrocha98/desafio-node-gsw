@@ -11,6 +11,10 @@ class AuthService {
   async generateToken(id) {
     return jwt.sign({ id }, JWT_SECRET, { expiresIn: JWT_EXPIRATION_TIME })
   }
+
+  async verifyToken(token) {
+    return jwt.verify(token, JWT_SECRET)
+  }
 }
 
 module.exports = new AuthService()
