@@ -4,13 +4,13 @@
 </div>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/mrocha98/desafio-node-gsw?style=plastic">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/mrocha98/desafio-node-gsw?style=for-the-badge"/>
 
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/mrocha98/desafio-node-gsw?style=plastic">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/mrocha98/desafio-node-gsw?style=for-the-badge"/>
 
-  <img alt="Repo size" src="https://img.shields.io/github/repo-size/mrocha98/desafio-node-gsw?style=plastic">
+  <img alt="Repo size" src="https://img.shields.io/github/repo-size/mrocha98/desafio-node-gsw?style=for-the-badge"/>
 
-  <img alt="License" src="https://img.shields.io/github/license/mrocha98/desafio-node-gsw?style=plastic">
+  <img alt="License" src="https://img.shields.io/github/license/mrocha98/desafio-node-gsw?style=for-the-badge"/>
 </p>
 
 ## 🎯 Objetivo
