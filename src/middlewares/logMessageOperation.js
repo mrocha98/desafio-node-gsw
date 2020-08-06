@@ -1,4 +1,4 @@
-const LogsService = require('../entities/logs/LogsService')
+const LogService = require('../entities/log/LogService')
 
 async function logMessageOperation(ctx, next) {
   await next()
@@ -12,7 +12,7 @@ async function logMessageOperation(ctx, next) {
   if (!message || !code) return
 
   try {
-    await LogsService.register({ userId, message, code })
+    await LogService.register({ userId, message, code })
   } catch (err) {
     console.error(err)
     return err
