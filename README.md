@@ -13,6 +13,10 @@
   <img alt="License" src="https://img.shields.io/github/license/mrocha98/desafio-node-gsw?style=for-the-badge"/>
 </p>
 
+<div align="center">
+  <a href="https://insomnia.rest/run/?label=desafio-node-gsw-sms&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fmrocha98%2Fdesafio-node-gsw%2Fmaster%2Fexamples%2Finsomnia_desafio_node_gsw.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"/></a>
+</div>
+
 ## 🎯 Objetivo
 
 Criação de uma api em NodeJS para conversão de texto em código SMS. Todas as conversões realizadas pelo usuário devem ser registradas em um banco Mongo.
